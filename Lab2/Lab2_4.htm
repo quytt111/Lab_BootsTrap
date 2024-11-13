@@ -16,9 +16,8 @@
     <div class="row container-lg">
         <div class="container mt-3">
             <h3>Bài tập ứng dụng modal cho tài khoản</h3>
-            <button class="btn-primary btn" type="button" data-bs-toggle="modal" data-bs-target="#mymodal">
-                tài khoản
-            </button>
+              <!-- nút button cho moal -->
+            <button class="btn-primary btn" type="button" data-bs-toggle="modal" data-bs-target="#mymodal">tài khoản</button>
         </div>
         <div class="modal" id="mymodal" tabindex="-1">
             <div class="modal-dialog">
@@ -27,20 +26,21 @@
                         <h4 class="modal-title">Đăng nhập/Đăng Ký</h4>
                         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                     </div>
+                    <!-- tablist cho đăng nhập và đăng kí -->
                     <div class="modal-body">
                         <div class="container mt-3">
                             <ul class="nav nav-tabs" role="tablist">
                                 <li class="nav-item">
-                                    <a href="#register" class="nav-link action" data-bs-toggle="tab">Đăng Ký</a>
+                                    <a href="#register" class="nav-link active" data-bs-toggle="tab">Đăng Ký</a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="#login" class="nav-link" data-bs-toggle="tab">Đăng nhập</a>
                                 </li>
                                 <li class="nav-item"></li>
                             </ul>
-
+                        <!-- tab của from đăng kí -->
                             <div class="tab-content">
-                                <div class="container tab-pane action" id="register">
+                                <div class="container tab-pane active fade show" id="register">
                                     <h1>Form Đăng Ký Thông Tin</h1>
                                     <form action="#" class="border p-3">
                                         <div class="mb-3 mt-3">
@@ -92,29 +92,26 @@
                                         </div>
                                         <div class="form-check mb-3">
                                             <label class="form-check-label">
-                                                <input class="form-check-input" type="checkbox" name="remember"> Tôi
-                                                đồng ý
-                                                với các điều khoản và điều kiện.
+                                                <input class="form-check-input" type="checkbox" name="remember"> Tôi đồng ý với các điều khoản và điều kịn.
                                             </label>
                                         </div>
                                         <button type="submit" class="btn btn-primary">Submit</button>
                                     </form>
                                 </div>
-
+                                 <!-- tab của from đăng nhập -->
                                 <div class="container tab-pane fade" id="login">
                                     <h1>Form Đăng Nhập</h1>
                                     <form action="#" class="border p-3">
                                         <div class="mb-3 mt-3">
                                             <label for="email" class="form-label">Email:</label>
                                             <input type="email" class="form-control" id="email"
-                                                placeholder="Enter email" name="email">
+                                                placeholder="Mời nhập email" name="email">
                                         </div>
                                         <div class="mb-3">
                                             <label for="pwd" class="form-label">Password:</label>
                                             <input type="password" class="form-control" id="pwd"
-                                                placeholder="Enter password" name="pswd">
+                                                placeholder="Nhập mật khẩu" name="pswd">
                                         </div>
-
                                         <button type="submit" class="btn btn-primary">Submit</button>
                                     </form>
                                 </div>
@@ -122,10 +119,8 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
-
     </div>
 </body>
 

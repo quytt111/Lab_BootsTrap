@@ -17,12 +17,6 @@
             padding: 10px 0;
             text-align: center;
         }
-        .card-item {
-            transition: transform 0.2s;
-        }
-        .card-item:hover {
-            transform: scale(1.05);
-        }
         footer {
             text-align: center;
             padding: 20px 0;
@@ -69,35 +63,33 @@
 
     <div class="container-lg my-4">
         <h2>Danh Sách Nhân Viên</h2>
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-            <div class="col">
-                <div class="card card-item">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Nhân Viên 1</h5>
-                        <p class="card-text">Chức vụ: Quản lý</p>
-                        <p class="card-text">Email: nv1@example.com</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card card-item">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Nhân Viên 2</h5>
-                        <p class="card-text">Chức vụ: Nhân viên</p>
-                        <p class="card-text">Email: nv2@example.com</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card card-item">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Nhân Viên 3</h5>
-                        <p class="card-text">Chức vụ: Nhân viên</p>
-                        <p class="card-text">Email: nv3@example.com</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <table class="table ">
+            <thead>
+                <tr>
+                    <th scope="col">Tên Nhân Viên</th>
+                    <th scope="col">Chức Vụ</th>
+                    <th scope="col">Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Nhân Viên 1</td>
+                    <td>Quản lý</td>
+                    <td>nv1@example.com</td>
+                </tr>
+                <tr>
+                    <td>Nhân Viên 2</td>
+                    <td>Nhân viên</td>
+                    <td>nv2@example.com</td>
+                </tr>
+                <tr>
+                    <td>Nhân Viên 3</td>
+                    <td>Nhân viên</td>
+                    <td>nv3@example.com</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
     <footer>
         <p>&copy; 2024 Quản Lý Nhân Viên và Video - Copyright by Your Company</p>
