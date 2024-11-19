@@ -23,8 +23,8 @@
         </div>
       </div>
     </nav>
-
-    <main class="mt-6 container-sm ">
+    <br>
+    <main class="mt-6 container-md ">
       <div class="container">
         <div class="row">
           <div class="col-md-8">
@@ -36,7 +36,6 @@
                     <div class="card-body text-lg-start">
                       <h3 class="card-text">
                         <i class="fa-solid fa-user"></i> {{ baiViet.tacGia }} 
-                        
                       </h3>
                       <h5 class="card-title">{{ baiViet.tieuDe }}</h5>
                       <p class="card-text">{{ baiViet.tomTat }}</p>
@@ -52,13 +51,14 @@
           </div>
           <div class="col-md-4 fixed">
             <div v-if="showDetail" class="">
-              <div class="card mb-4 shadow">
+              <div class="card mb-4 shadow ">
                 <div class="d-flex">
                   <img :src="selectedBaiViet.avatarngdang" class="rounded-circle mr-3" alt="Avatar" />
-                  <h3 class="card-text text-start me-1 my-auto ms-3"> {{ selectedBaiViet.tacGia }} </h3>
-                  <p class="my-auto text-muted text-lg-start">{{ selectedBaiViet.tieuDe }}</p>
+                  <h6 class="card-text text-start me-1 my-auto ms-3"> {{ selectedBaiViet.tacGia }} </h6>  
+                  <p class=" ms-2 my-auto text-muted text-lg-start">{{ selectedBaiViet.tieuDe }}</p>
+                  <button class="btn ms-auto border-0" @click ="close()" >X</button>
                 </div>
-                <p class="text-lg-start"> {{ selectedBaiViet.thoiGian }}</p>
+                <p class=""> {{ selectedBaiViet.thoiGian }}</p>
                 <div class="">
                   <img :src="selectedBaiViet.hinhAnh" class="card-img-top" alt="Hình bài viết" />
                   <div class="card-body text-lg-start">
@@ -77,7 +77,7 @@
                     </div>
                     <div>
                       <input type="text" v-model="newComment" placeholder="Nhập bình luận của bạn" class="form-control" />
-                      <button class="btn btn-primary mt-2" @click="addComment">Gửi bình luận</button>
+                      <button class=" d-flex btn btn-primary mt-2 ms-auto" @click="addComment">Gửi bình luận</button>
                     </div>
                   </div>
                 </div>
@@ -140,7 +140,7 @@ const baiBiet = ref([
     tomTat: 'Tóm tắt bài viết 1...',
     noiDung: 'Nội dung chi tiết của bài viết 1...',
     hinhAnh: 'https://via.placeholder.com/150',
-    tacGia: 'Tèo',
+    tacGia: 'Thần điêu đại hiệp',
     thoiGian: '03/11/2024',
     binhLuan: 2,
     comments: [
@@ -155,7 +155,7 @@ const baiBiet = ref([
     tomTat: 'Tóm tắt bài viết 2...',
     noiDung: 'Nội dung chi tiết của bài viết 2...',
     hinhAnh: 'https://via.placeholder.com/150',
-    tacGia: 'Nở',
+    tacGia: 'Quách tỉnh',
     thoiGian: '03/11/2024',
     binhLuan: 2,
     comments: [
@@ -170,7 +170,7 @@ const baiBiet = ref([
     tomTat: 'Tóm tắt bài viết 3...',
     noiDung: 'Nội dung chi tiết của bài viết 3...',
     hinhAnh: 'https://via.placeholder.com/150',
-    tacGia: 'Phèo',
+    tacGia: 'Yêu em không giả dối',
     thoiGian: '03/11/2024',
     binhLuan: 2,
     comments: [
@@ -185,7 +185,7 @@ const baiBiet = ref([
     tomTat: 'Tóm tắt bài viết 4...',
     noiDung: 'Nội dung chi tiết của bài viết 4...',
     hinhAnh: 'https://via.placeholder.com/150',
-    tacGia: 'Hùng',
+    tacGia: 'Một lòng bên em',
     thoiGian: '04/11/2024',
     binhLuan: 2,
     comments: [
@@ -200,7 +200,7 @@ const baiBiet = ref([
     tomTat: 'Tóm tắt bài viết 5...',
     noiDung: 'Nội dung chi tiết của bài viết 5...',
     hinhAnh: 'https://via.placeholder.com/150',
-    tacGia: 'Linh',
+    tacGia: 'Con thỏ trắng',
     thoiGian: '05/11/2024',
     binhLuan: 2,
     comments: [
@@ -215,7 +215,37 @@ const baiBiet = ref([
     tomTat: 'Tóm tắt bài viết 5...',
     noiDung: 'Nội dung chi tiết của bài viết 5...',
     hinhAnh: 'https://via.placeholder.com/150',
-    tacGia: 'Linh',
+    tacGia: 'Canh mạnh bà',
+    thoiGian: '05/11/2024',
+    binhLuan: 2,
+    comments: [
+      { user: 'Phạm Văn I', text: 'Bài viết rất truyền cảm hứng!' },
+      { user: 'Trần Thị J', text: 'Mình sẽ theo dõi thêm bài viết của bạn!' }
+    ]
+  },
+  {
+    id: 7,
+    avatarngdang: 'https://via.placeholder.com/50',
+    tieuDe: 'Bài Viết 5',
+    tomTat: 'Tóm tắt bài viết 5...',
+    noiDung: 'Nội dung chi tiết của bài viết 5...',
+    hinhAnh: 'https://via.placeholder.com/150',
+    tacGia: 'Anh hùng xa lộ',
+    thoiGian: '05/11/2024',
+    binhLuan: 2,
+    comments: [
+      { user: 'Phạm Văn I', text: 'Bài viết rất truyền cảm hứng!' },
+      { user: 'Trần Thị J', text: 'Mình sẽ theo dõi thêm bài viết của bạn!' }
+    ]
+  },
+  {
+    id: 8,
+    avatarngdang: 'https://via.placeholder.com/50',
+    tieuDe: 'Bài Viết 5',
+    tomTat: 'Tóm tắt bài viết 5...',
+    noiDung: 'Nội dung chi tiết của bài viết 5...',
+    hinhAnh: 'https://via.placeholder.com/150',
+    tacGia: 'Dương quá 2 tay',
     thoiGian: '05/11/2024',
     binhLuan: 2,
     comments: [
@@ -233,6 +263,9 @@ const showBlogDetail = (baiViet) => {
   selectedBaiViet.value = baiViet;
   showDetail.value = true;
 };
+function close() {
+  showDetail.value = false;
+}
 
 const addComment = () => {
   if (newComment.value.trim() === '') return;
