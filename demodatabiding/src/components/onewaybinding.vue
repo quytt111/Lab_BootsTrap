@@ -6,7 +6,7 @@
     <a class="btn" :href="url">đi đến trang</a>
 </div>
 <!-- two way binding  -->
-<div>
+<!-- <div>
     Họ và tên của bạn {{ name }}
     <br>
     <input type="text" v-model="name">
@@ -34,7 +34,7 @@
     <input type="checkbox" value="Bi da"v-model="soThich"> Bi Da
     <input type="checkbox" value="Du Lịch"v-model="soThich"> Du Lịch
 </div>
-</template>
+</template> -->
 
 <script>
     export default{
