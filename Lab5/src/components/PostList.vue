@@ -1,7 +1,7 @@
 <template>
     <div>
       <h2>Danh sách bài viết</h2>
-      <div v-for="(post, index) in posts" :key="index" :class="{'high-lighted': post.title.length > 20}"
+      <div v-for="(post, index) in posts" :key="index" :class="{'high-lighted': post.tieuDe.length > 20}"
         :style="{backgroundColor: post.backgroundColor, color: post.textColor}" class="post">
         <h3>{{ post.tieuDe }}</h3>
         <h4>{{ post.tenTG }}</h4>
